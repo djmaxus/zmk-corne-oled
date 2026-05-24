@@ -46,9 +46,9 @@ layers:
   - {t: '`', s: '~'}
   - NUMBER
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - '&spenter'
   - SYMBOL
-  - {t: game, h: toggle}
+  - fn
   game:
   - $$mdi:keyboard-tab$$
   - Q
@@ -97,7 +97,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-option$$
-  - '&game_disable'
+  - {t: '$$mdi:transfer$$', type: trans}
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
@@ -141,12 +141,12 @@ layers:
   - RGB BRD
   - END
   - PG DN
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -239,7 +239,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -249,4 +249,6 @@ combos:
 - p: [1, 15, 29]
   k: '&soft_off'
 - p: [42, 47]
-  k: fn
+  k: NUMBER
+- p: [2, 15, 14, 16, 40, 39, 41, 26]
+  k: {t: game, h: toggle}
