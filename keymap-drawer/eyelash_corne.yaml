@@ -26,7 +26,7 @@ layers:
   - {t: H, h: RIGHT GUI}
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: L}
+  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:keyboard-esc$$
@@ -44,12 +44,12 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: '`', s: '~'}
-  - num
+  - NUM
   - $$mdi:keyboard-space$$
   - '&spenter'
-  - num
-  - fn
-  num:
+  - NUM
+  - FN
+  NUM:
   - +
   - {t: '''', s: '"'}
   - <
@@ -98,7 +98,7 @@ layers:
   - '&spenter'
   - {type: held alternate}
   - END
-  fn:
+  FN:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  corne:
+  CORN:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -196,7 +196,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  game:
+  GAME:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -249,6 +249,6 @@ combos:
 - p: [1, 15, 29]
   k: '&soft_off'
 - p: [42, 47]
-  k: corne
+  k: CORN
 - p: [2, 15, 14, 16, 40, 39, 41, 26]
-  k: {t: game, h: toggle}
+  k: {t: GAME, h: toggle}
