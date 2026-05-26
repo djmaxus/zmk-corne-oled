@@ -2,17 +2,17 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - '&q1td'
+  - '&w2td'
+  - '&e3td'
+  - '&r4td'
+  - '&t5td'
   - $$mdi:arrow-up-bold$$
-  - Y
-  - U
-  - I
-  - O
-  - P
+  - '&y6td'
+  - '&u7td'
+  - '&i8td'
+  - '&o9td'
+  - '&p0td'
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:alpha-w-box$$
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
@@ -27,7 +27,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ;, s: ':'}
+  - {t: '$$mdi:arrow-up-bold$$', h: ;}
   - {t: '''', s: '"'}
   - $$mdi:keyboard-esc$$
   - Z
@@ -40,9 +40,9 @@ layers:
   - N
   - M
   - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - {t: \, s: '|'}
+  - {t: '$$mdi:arrow-left-bold$$', h: .}
+  - {t: '$$mdi:arrow-down-bold$$', h: /}
+  - {t: '$$mdi:arrow-right-bold$$', h: \}
   - {t: '`', s: '~'}
   - NUM
   - $$mdi:keyboard-space$$
@@ -93,10 +93,10 @@ layers:
   - F11
   - F12
   - HOME
-  - {type: held}
+  - {t: SYM, type: held}
   - '&spenter'
   - '&spenter'
-  - {type: held alternate}
+  - {t: SYM, type: held alternate}
   - END
   SYM:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -142,10 +142,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - '&spenter'
   - '&spenter'
-  - {type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   FN:
   - {t: '$$mdi:transfer$$', type: trans}
