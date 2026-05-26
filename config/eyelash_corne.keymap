@@ -50,54 +50,63 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp N1>;
         };
+
         w2td: w2td {
             compatible = "zmk,behavior-tap-dance";
             label = "W2TD";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp N2>;
         };
+
         e3td: e3td {
             compatible = "zmk,behavior-tap-dance";
             label = "E3TD";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp N3>;
         };
+
         r4td: r4td {
             compatible = "zmk,behavior-tap-dance";
             label = "R4TD";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp N4>;
         };
+
         t5td: t5td {
             compatible = "zmk,behavior-tap-dance";
             label = "T5TD";
             #binding-cells = <0>;
             bindings = <&kp T>, <&kp N5>;
         };
+
         y6td: y6td {
             compatible = "zmk,behavior-tap-dance";
             label = "Y6TD";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp N6>;
         };
+
         u7td: u7td {
             compatible = "zmk,behavior-tap-dance";
             label = "U7TD";
             #binding-cells = <0>;
             bindings = <&kp U>, <&kp N7>;
         };
+
         i8td: i8td {
             compatible = "zmk,behavior-tap-dance";
             label = "I8TD";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp N8>;
         };
+
         o9td: o9td {
             compatible = "zmk,behavior-tap-dance";
             label = "O9TD";
             #binding-cells = <0>;
             bindings = <&kp O>, <&kp N9>;
         };
+
         p0td: p0td {
             compatible = "zmk,behavior-tap-dance";
             label = "P0TD";
@@ -204,7 +213,7 @@
 
         game {
             bindings = <
-&kp TAB    &q1td  &kp W  &kp E     &kp R     &kp T                                    &mmv MOVE_UP                     &kp Y      &kp U     &kp I      &kp O           &kp P           &kp ESCAPE
+&kp TAB    &q1td  &w2td  &e3td     &r4td     &t5td                                    &mmv MOVE_UP                     &y6td      &u7td     &i8td      &o9td           &p0td           &kp ESCAPE
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F     &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H      &kp J     &kp K      &kp L           &kp UP_ARROW    &kp ENTER
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N      &kp M     &kp COMMA  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
                          &kp LALT  &kp LGUI  &kp SPACE                                                                 &kp SPACE  &kp LALT  &mkp RCLK
