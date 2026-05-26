@@ -50,6 +50,60 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp N1>;
         };
+        w2td: w2td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "W2TD";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp N2>;
+        };
+        e3td: e3td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "E3TD";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp N3>;
+        };
+        r4td: r4td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "R4TD";
+            #binding-cells = <0>;
+            bindings = <&kp R>, <&kp N4>;
+        };
+        t5td: t5td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "T5TD";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp N5>;
+        };
+        y6td: y6td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Y6TD";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&kp N6>;
+        };
+        u7td: u7td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "U7TD";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&kp N7>;
+        };
+        i8td: i8td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "I8TD";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp N8>;
+        };
+        o9td: o9td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "O9TD";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&kp N9>;
+        };
+        p0td: p0td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "P0TD";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp N0>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
