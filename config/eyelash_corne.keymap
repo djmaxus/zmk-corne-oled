@@ -44,6 +44,32 @@
             bindings = <&kp SPACE>, <&kp ENTER>;
         };
 
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <14 15 16 17>; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <22 23 24 25>; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
+
         q1td: q1td {
             compatible = "zmk,behavior-tap-dance";
             label = "Q1TD";
@@ -159,10 +185,10 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &kp Q             &kp W               &kp E           &kp R           &kp T                              &kp UP                &kp Y            &kp U            &kp I                &kp O              &kp P     &kp BSPC
-&caps_word  &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &mt RIGHT_GUI H  &mt RIGHT_ALT J  &mt RIGHT_CONTROL K  &mt RIGHT_SHIFT L  &kp SEMI  &kp SQT
-&kp ESCAPE  &kp Z             &kp X               &kp C           &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N            &kp M            &kp COMMA            &kp DOT            &kp FSLH  &kp BACKSLASH
-                                                  &kp GRAVE       &mo 1           &kp SPACE                                                &spenter         &mo 1            &mo 3
+&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td                &kp BSPC
+&caps_word  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &mt SEMI UP_ARROW    &kp SQT
+&kp ESCAPE  &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &mt DOT LEFT_ARROW  &mt FSLH DOWN_ARROW  &mt BACKSLASH RIGHT_ARROW
+                                                    &kp GRAVE        &mo 1           &kp SPACE                                                &spenter          &mo 1             &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -173,7 +199,7 @@
 &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                            &mmv MOVE_UP                     &kp RS(N6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &kp EQUAL
 &kp GRAVE      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
 &kp F1         &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &trans                    &mmv MOVE_DOWN                   &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
-                                       &kp HOME    &trans      &spenter                                                               &spenter    &trans      &kp END
+                                       &kp HOME    &mo 2       &spenter                                                               &spenter    &mo 2       &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
@@ -186,7 +212,7 @@
 &trans  &trans            &trans         &trans          &trans            &trans                                  &trans          &trans                 &trans             &trans           &trans            &trans             &trans
 &trans  &kp SINGLE_QUOTE  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS            &trans  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &trans
 &trans  &trans            &trans         &trans          &trans            &trans                &trans            &trans          &trans                 &trans             &trans           &trans            &trans             &trans
-                                         &trans          &trans            &spenter                                                &spenter               &trans             &trans
+                                         &trans          &none             &spenter                                                &spenter               &none              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
