@@ -27,7 +27,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:arrow-up-bold$$', h: ;}
+  - {t: ;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:keyboard-esc$$
   - Z
@@ -40,9 +40,9 @@ layers:
   - N
   - M
   - {t: ',', s: <}
-  - {t: '$$mdi:arrow-left-bold$$', h: .}
-  - {t: '$$mdi:arrow-down-bold$$', h: /}
-  - {t: '$$mdi:arrow-right-bold$$', h: \}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: \, s: '|'}
   - {t: '`', s: '~'}
   - NUM
   - $$mdi:keyboard-space$$
