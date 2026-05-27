@@ -185,9 +185,9 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td                &kp BSPC
-&caps_word  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &mt SEMI UP_ARROW    &kp SQT
-&kp ESCAPE  &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &mt DOT LEFT_ARROW  &mt FSLH DOWN_ARROW  &mt BACKSLASH RIGHT_ARROW
+&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     &kp BSPC
+&caps_word  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &kp SEMI  &kp SQT
+&kp ESCAPE  &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &kp DOT             &kp FSLH  &kp BACKSLASH
                                                     &kp GRAVE        &mo 1           &kp SPACE                                                &spenter          &mo 1             &mo 3
             >;
 
