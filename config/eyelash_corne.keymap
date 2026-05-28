@@ -171,18 +171,13 @@
         };
 
         corne_layer {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <42 47>;
         };
 
         game_mode {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <2 15 14 16 40 39 41 26>;
-        };
-
-        sym_layer {
-            bindings = <&mo 2>;
-            key-positions = <43 46>;
         };
     };
 
@@ -195,7 +190,7 @@
 &kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     &td_bp_del
 &kp ESCAPE  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &kp SEMI  &kp ENTER
 &kp GRAVE   &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &kp DOT             &kp FSLH  &kp SINGLE_QUOTE
-                                                    &caps_word       &mo 1           &kp SPACE                                                &spenter          &mo 1             &mo 3
+                                                    &caps_word       &mo 1           &kp SPACE                                                &spenter          &mo 1             &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -203,34 +198,22 @@
 
         num {
             bindings = <
-&kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                            &mmv MOVE_UP                     &kp RS(N6)  &kp RS(N7)  &kp RS(N8)  &kp RS(N9)  &kp RS(N0)  &kp EQUAL
-&kp GRAVE      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-&kp F1         &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &trans                    &mmv MOVE_DOWN                   &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
-                                       &kp HOME    &mo 2       &spenter                                                               &spenter    &mo 2       &kp END
+&kp TAB         &kp N6     &kp N7     &kp N8        &kp N9        &kp N0                               &mmv MOVE_UP                     &kp HOME       &kp END         &kp LBKT      &kp RBKT         &kp BSLH  &td_bp_del
+&kp ESC         &kp N1     &kp N2     &kp N3        &kp N4        &kp N5               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp GRAVE  &kp SLASH  &kp ASTERISK  &kp MINUS     &kp EQUAL  &trans                    &mmv MOVE_DOWN                   &kp PAGE_DOWN  &kp PAGE_UP     &kp COMMA     &kp DOT          &kp FSLH  &kp RSHFT
+                                      &kp LALT      &kp LEFT_GUI  &spenter                                                              &spenter       &kp RIGHT_GUI   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             label = "NUM";
         };
 
-        symbol {
-            label = "SYM";
-            bindings = <
-&trans     &trans            &trans         &trans          &kp SLASH         &kp MINUS                               &trans          &kp PLUS               &kp ASTERISK       &kp EQUAL        &trans            &trans             &trans
-&kp COLON  &kp SINGLE_QUOTE  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS            &trans  &trans  &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SEMICOLON
-&trans     &trans            &trans         &trans          &kp NON_US_HASH   &kp SLASH             &trans            &trans          &kp BACKSLASH          &trans             &trans           &trans            &trans             &trans
-                                            &trans          &none             &spenter                                                &spenter               &none              &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>;
-        };
-
         fn {
             bindings = <
-&none  &none  &none  &none  &none  &none                  &none         &none  &none  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &kp K_COFFEE
-&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &none
-&none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none              &none             &none            &none
-                     &none  &none  &none                                &none  &none  &none
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                           &none                         &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&none   &none   &none   &none   &none   &none            &kp K_PREVIOUS  &kp K_PLAY_PAUSE  &kp K_NEXT  &none   &none   &none   &none    &none    &none
+&none   &none   &none   &none   &none   &none   &none                    &none                         &none   &none   &none   &none    &none    &none
+                        &none   &none   &none                                                          &none   &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
