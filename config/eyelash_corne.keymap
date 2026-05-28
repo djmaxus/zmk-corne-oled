@@ -139,6 +139,13 @@
             #binding-cells = <0>;
             bindings = <&kp P>, <&kp N0>;
         };
+
+        td_bp_del: td_bp_del {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_BP_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -185,10 +192,10 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     &kp BSPC
-&caps_word  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &kp SEMI  &kp SQT
-&kp ESCAPE  &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &kp DOT             &kp FSLH  &kp BACKSLASH
-                                                    &kp GRAVE        &mo 1           &kp SPACE                                                &spenter          &mo 1             &mo 3
+&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     &td_bp_del
+&kp ESCAPE  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &kp SEMI  &kp ENTER
+&kp GRAVE   &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &kp DOT             &kp FSLH  &kp SINGLE_QUOTE
+                                                    &caps_word       &mo 1           &kp SPACE                                                &spenter          &mo 1             &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
