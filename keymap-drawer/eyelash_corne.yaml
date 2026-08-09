@@ -13,7 +13,7 @@ layers:
   - '&i8td'
   - '&o9td'
   - '&p0td'
-  - '&td_bp_del'
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-esc$$
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
@@ -62,7 +62,7 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
-  - '&td_bp_del'
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-esc$$
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
