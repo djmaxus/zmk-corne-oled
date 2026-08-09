@@ -1,13 +1,15 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
-#define LEFT_HAND  0 1 2  3  4  5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 43 44
+#define LEFT_HAND  0 1 2  3  4  5 13 14 15 16 17 18 28 29 30 31 32 33 42 43 44
 #define JOYSTICK   6 19 20 21 35
 #define RIGHT_HAND 7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47
-#define KNOB
+#define KNOB 34
 #define LEFT_THUMB 42 43 44
 #define RIGHT_THUMB 45 46 47
 #define TAB_POS 0
 #define ESC_POS 13
+#define HOME_ROW_LEFT 14 15 16 17
+#define HOME_ROW_RIGHT 22 23 24 25
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -57,7 +59,7 @@
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
 
             tapping-term-ms = <240>;
             quick-tap-ms = <150>;
@@ -65,14 +67,14 @@
 
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <RIGHT_HAND LEFT_THUMB JOYSTICK TAB_POS ESC_POS KNOB>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <RIGHT_HAND LEFT_THUMB JOYSTICK TAB_POS ESC_POS KNOB HOME_ROW_LEFT>; // List of keys on the right side of the keyboard
             // hold-trigger-on-release;
         };
 
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
 
             tapping-term-ms = <240>;
             quick-tap-ms = <150>;
@@ -80,7 +82,7 @@
 
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <LEFT_HAND RIGHT_THUMB JOYSTICK TAB_POS ESC_POS KNOB>; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <LEFT_HAND RIGHT_THUMB JOYSTICK TAB_POS ESC_POS KNOB HOME_ROW_RIGHT>; // List of keys on the left side of the keyboard
             // hold-trigger-on-release;
         };
 
@@ -175,6 +177,21 @@
             tap-ms = <100>;
         };
 
+        rsr_trans: rsr_trans {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <0>;
+        };
+
+        rsr_vol: rsr_vol {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <5>;
+            cw-binding = <&kp C_VOL_UP>;
+            ccw-binding = <&kp C_VOL_DN>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -200,7 +217,7 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     &td_bp_del
+&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     BACKSPACE
 &kp ESCAPE  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &kp SEMI  &kp SINGLE_QUOTE
 &kp GRAVE   &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &kp DOT             &kp FSLH  &kp BSLH
                                                     &caps_word       &mo 1           &kp SPACE                                                &kp ENTER         &mo 1             &mo 2
@@ -211,7 +228,7 @@
 
         num {
             bindings = <
-&kp TAB         &kp N1     &kp N2     &kp N3        &kp N4        &kp N5                                  &mmv MOVE_UP                     &kp HOME       &kp END         &kp LBKT      &kp RBKT         &kp BSLH  &td_bp_del
+&kp TAB         &kp N1     &kp N2     &kp N3        &kp N4        &kp N5                                  &mmv MOVE_UP                     &kp HOME       &kp END         &kp LBKT      &kp RBKT         &kp BSLH  DELETE
 &kp ESC         &kp N6     &kp N7     &kp N8        &kp N9        &kp N0                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp SEMI  &kp APOS
 &kp LEFT_SHIFT  &kp GRAVE  &kp SLASH  &kp ASTERISK  &kp MINUS     &kp EQUAL  &mkp RCLK                    &mmv MOVE_DOWN                   &kp PAGE_DOWN  &kp PAGE_UP     &kp COMMA     &kp DOT          &kp FSLH  &kp RSHFT
                                       &kp LALT      &kp LEFT_GUI  &kp SPACE                                                                &kp ENTER      &kp RIGHT_GUI   &kp RCTRL
