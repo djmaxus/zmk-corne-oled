@@ -217,7 +217,7 @@
         qwerty {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     BACKSPACE
+&kp TAB     &q1td              &w2td                &e3td            &r4td           &t5td                              &kp UP                &y6td             &u7td             &i8td                 &o9td               &p0td     &kp BACKSPACE
 &kp ESCAPE  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &mt LEFT_GUI F  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &hmr RIGHT_GUI H  &hmr RIGHT_ALT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_SHIFT L  &kp SEMI  &kp SINGLE_QUOTE
 &kp GRAVE   &kp Z              &kp X                &kp C            &kp V           &kp B      &kp C_MUTE              &kp DOWN              &kp N             &kp M             &kp COMMA             &kp DOT             &kp FSLH  &kp BSLH
                                                     &caps_word       &mo 1           &kp SPACE                                                &kp ENTER         &mo 1             &mo 2
@@ -228,7 +228,7 @@
 
         num {
             bindings = <
-&kp TAB         &kp N1     &kp N2     &kp N3        &kp N4        &kp N5                                  &mmv MOVE_UP                     &kp HOME       &kp END         &kp LBKT      &kp RBKT         &kp BSLH  DELETE
+&kp TAB         &kp N1     &kp N2     &kp N3        &kp N4        &kp N5                                  &mmv MOVE_UP                     &kp HOME       &kp END         &kp LBKT      &kp RBKT         &kp BSLH  &kp DELETE
 &kp ESC         &kp N6     &kp N7     &kp N8        &kp N9        &kp N0                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp SEMI  &kp APOS
 &kp LEFT_SHIFT  &kp GRAVE  &kp SLASH  &kp ASTERISK  &kp MINUS     &kp EQUAL  &mkp RCLK                    &mmv MOVE_DOWN                   &kp PAGE_DOWN  &kp PAGE_UP     &kp COMMA     &kp DOT          &kp FSLH  &kp RSHFT
                                       &kp LALT      &kp LEFT_GUI  &kp SPACE                                                                &kp ENTER      &kp RIGHT_GUI   &kp RCTRL
